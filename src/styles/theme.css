@@ -27,7 +27,7 @@
 
 /* app colors */
 :root {
-  --clr-primary-100: color-mix(in srgb, var(--clr-primary-400), white 95%);
+  --clr-primary-100: color-mix(in srgb, var(--clr-primary-400), white 93%);
   --clr-primary-200: color-mix(in srgb, var(--clr-primary-400), white 80%);
   --clr-primary-400: #81b0ea;
   --clr-primary-600: color-mix(in srgb, var(--clr-primary-400), black 20%);

@@ -1,12 +1,14 @@
 <script lang="ts">
   import HomeFacts from '$lib/components/HomeFacts.svelte'
   import HomeLiveCounts from '$lib/components/HomeLiveCounts.svelte'
-  import TopicTeasers from '$lib/components/TopicTeasers.svelte'
   import ExamineTopics from '$lib/components/ExamineTopics.svelte'
-  import { faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons'
-  import { faCircleNodes } from '@fortawesome/free-solid-svg-icons'
-  import { faBuildingColumns } from '@fortawesome/free-solid-svg-icons'
   import FA from 'svelte-fa'
+  import {
+    faMagnifyingGlassChart,
+    faMoneyBills,
+    faBuildingColumns,
+    faCircleNodes
+  } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <main>
@@ -49,17 +51,41 @@
       >
     </div>
   </section>
-  <section class="container">
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Offentliche Verwaltung und Finanzen" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Staatsburgerschaft" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Kommer und Tourismus" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Kultur" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Umwelt" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Ausrustung, Dienstung, Soziales" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Mobilitat und offentlicher Raum" /></div>
-    <div class="container"><TopicTeasers svg="../../icons/..." title="Stadtplanung und Wohen" /></div>
+  <section class="container topics-container">
+    <div class="topic-teasers">
+      <FA icon={faMoneyBills} color="var(--clr-primary-400)" />
+      <h3>Offentliche Verwaltung und Finanzen</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Staatsburgerschaft</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Kommer und Tourismus</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Kultur</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Umwelt</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Ausrustung, Dienstung, Soziales</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>Mobilitat und offentlicher Raum</h3>
+    </div>
+    <div class="topic-teasers">
+      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
+      <h3>"Stadtplanung und Wohen"</h3>
+    </div>
   </section>
-  <section class="container">
+  <!-- <section class="container">
     <h2>Explore Examine</h2>
     <p>
       Examine is structured around 25 broad health categories, containing hundreds of conditions, Interventiosn (like
@@ -68,5 +94,35 @@
     <ExamineTopics name="Interventions" subTopics={['Ashwagandha', 'Creatine', 'Fish Oil']} />
     <ExamineTopics name="Outcomes" subTopics={['Blood Glucose', 'Blood Pressure', 'Testosterone']} />
     <ExamineTopics name="Categories" subTopics={['Brain Health', 'Fat Loss', 'Muscle Gain & Excercise']} />
-  </section>
+  </section> -->
 </main>
+
+<style>
+  .topics-container {
+    display: grid;
+    grid-template-columns: (1fr);
+
+    gap: 0.5em;
+    padding: 0.5em;
+  }
+  @media (min-width: 768px) {
+    .topics-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .topics-container {
+      background-color: white;
+    }
+  }
+  .topic-teasers {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--clr-primary-100);
+  }
+
+  .topic-teasers h3 {
+    font-size: 1em;
+    margin: 0 0 0 1rem;
+  }
+</style>

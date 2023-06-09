@@ -16,7 +16,7 @@
     width: min(220px, 100%);
     justify-self: center;
     @media screen and (max-width: 875px) {
-      margin-bottom: 3em;
+      /* margin-bottom: 3em; */
     }
   }
   h2 {
