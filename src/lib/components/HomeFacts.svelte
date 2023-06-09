@@ -4,7 +4,9 @@
 </script>
 
 <div>
-  <slot />
+  <div class="svg">
+    <slot />
+  </div>
   <h2>{title}</h2>
   <p>{description}</p>
 </div>
@@ -24,15 +26,14 @@
     font-size: 0.75em;
     font-weight: 200;
   }
-  *,
-  :global(svg) {
+  * {
     margin-bottom: 0.45rem;
   }
-  :global(svg) {
+  .svg {
     font-size: 3rem;
   }
   @media screen and (min-width: 875px) {
-    :global(svg) {
+    .svg {
       font-size: 2.5em;
     }
   }
