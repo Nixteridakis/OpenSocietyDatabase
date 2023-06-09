@@ -4,8 +4,8 @@
   }
 }
 
-body section:first-of-type {
-  margin-top: var(--block-spacing-vertical);
+body main {
+  padding: var(--block-spacing-vertical) 0;
 }
 
 /* Navigation styling */

@@ -24,8 +24,8 @@
     <a class="btn-sm subscribe" href="#" on:click|preventDefault role="button">Newsletter Subscribe</a>
   </div>
 </header>
-
 <slot />
+<footer />
 
 <style>
   .primary-nav {
@@ -43,5 +43,9 @@
     .subscribe {
       display: block;
     }
+  }
+  footer {
+    padding: 2em 5em;
+    background-color: var(--clr-primary-600);
   }
 </style>
