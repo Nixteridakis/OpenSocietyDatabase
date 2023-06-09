@@ -1,0 +1,34 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--clr-primary-100);
+  }
+}
+
+body section:first-of-type {
+  margin-top: var(--block-spacing-vertical);
+}
+
+/* Navigation styling */
+.primary-nav {
+  background-color: white;
+}
+nav > * {
+  font-size: 0.75rem;
+}
+nav li[role='list'] a {
+  align-items: center;
+}
+
+/* Hero */
+.hero-section {
+  width: min(650px, 100% - 2rem);
+  margin-inline: auto;
+  text-align: center;
+}
+.search {
+  display: flex;
+}
+.search button {
+  width: 3.3rem;
+  transform: translateX(-4px);
+}
