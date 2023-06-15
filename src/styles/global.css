@@ -1,3 +1,6 @@
+body {
+  text-wrap: balance;
+}
 @media (prefers-color-scheme: light) {
   body {
     background-color: var(--clr-primary-100);
@@ -21,7 +24,7 @@ nav li[role='list'] a {
 
 /* Hero */
 .hero-section {
-  width: min(650px, 100% - 2rem);
+  width: min(740px, 100% - 2rem);
   margin-inline: auto;
   text-align: center;
 }

@@ -14,9 +14,9 @@
         <li role="list" dir="rtl">
           <a href="#" aria-haspopup="listbox">Select your country</a>
           <ul role="listbox">
-            <li><a>Country 1</a></li>
-            <li><a>Country 2</a></li>
-            <li><a>Country 3</a></li>
+            <li><a href="/country/Germany" data-sveltekit-preload-data="tap">Germany</a></li>
+            <li><a href="/country/Italy" data-sveltekit-preload-data="tap">Italy</a></li>
+            <li><a href="/country/Greece" data-sveltekit-preload-data="tap">Greece</a></li>
           </ul>
         </li>
       </ul>
