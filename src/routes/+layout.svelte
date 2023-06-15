@@ -45,7 +45,7 @@
     }
   }
   footer {
-    padding: 2em 5em;
+    padding: 2em 5 em;
     background-color: var(--clr-primary-600);
   }
 </style>

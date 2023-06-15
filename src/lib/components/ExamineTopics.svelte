@@ -10,11 +10,28 @@
   let { name, subTopics } = $$props
 </script>
 
-<h4>
-  {name}
-</h4>
-{#each subTopics as subTopic}
-  <p>{subTopic}</p>
-{/each}
+<div>
+  <h4>
+    {name}
+  </h4>
+  <ul>
+    {#each subTopics as subTopic}
+      <li>{subTopic}</li>
+    {/each}
+  </ul>
+  <a href="#">See All -></a>
+</div>
 
-<a href="#">See All -></a>
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & li {
+      color: var(--clr-primary-600);
+    }
+  }
+  a {
+    margin-top: auto;
+  }
+</style>

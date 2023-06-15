@@ -85,23 +85,29 @@
       <h3>"Stadtplanung und Wohen"</h3>
     </div>
   </section>
-  <!-- <section class="container">
-    <h2>Explore Examine</h2>
-    <p>
-      Examine is structured around 25 broad health categories, containing hundreds of conditions, Interventiosn (like
-      supplements and diets) are studied for measurable changes in specific outcomes
-    </p>
-    <ExamineTopics name="Interventions" subTopics={['Ashwagandha', 'Creatine', 'Fish Oil']} />
-    <ExamineTopics name="Outcomes" subTopics={['Blood Glucose', 'Blood Pressure', 'Testosterone']} />
-    <ExamineTopics name="Categories" subTopics={['Brain Health', 'Fat Loss', 'Muscle Gain & Excercise']} />
-  </section> -->
+  <section class="container-fluid examine">
+    <div class="container">
+      <div class="examine--heading">
+        <h2>Explore Examine</h2>
+        <p>
+          Examine is structured around 25 broad health categories, containing hundreds of conditions, Interventiosn
+          (like supplements and diets) are studied for measurable changes in specific outcomes
+        </p>
+      </div>
+      <div class="grid">
+        <ExamineTopics name="Conditions" subTopics={['Anxiety', 'Insomnia', 'Multiple Sclerosis']} />
+        <ExamineTopics name="Interventions" subTopics={['Ashwagandha', 'Creatine', 'Fish Oil']} />
+        <ExamineTopics name="Outcomes" subTopics={['Blood Glucose', 'Blood Pressure', 'Testosterone']} />
+        <ExamineTopics name="Categories" subTopics={['Brain Health', 'Fat Loss', 'Muscle Gain & Excercise']} />
+      </div>
+    </div>
+  </section>
 </main>
 
 <style>
   .topics-container {
     display: grid;
     grid-template-columns: (1fr);
-
     gap: 0.5em;
     padding: 0.5em;
   }
@@ -124,5 +130,12 @@
   .topic-teasers h3 {
     font-size: 1em;
     margin: 0 0 0 1rem;
+  }
+  .examine {
+    padding: var(--block-spacing-vertical) 0E;
+    background-color: #fff;
+  }
+  .examine--heading {
+    text-align: center;
   }
 </style>
