@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   text-wrap: balance;
 }
 @media (prefers-color-scheme: light) {
   body {
-    background-color: var(--clr-primary-100);
+    /* background-color: var(--clr-primary-100); */
   }
 }
 
@@ -12,26 +16,3 @@ body main {
 }
 
 /* Navigation styling */
-.primary-nav {
-  background-color: white;
-}
-nav > * {
-  font-size: 0.75rem;
-}
-nav li[role='list'] a {
-  align-items: center;
-}
-
-/* Hero */
-.hero-section {
-  width: min(740px, 100% - 2rem);
-  margin-inline: auto;
-  text-align: center;
-}
-.search {
-  display: flex;
-}
-.search button {
-  width: 3.3rem;
-  transform: translateX(-4px);
-}

@@ -3,28 +3,21 @@
   export let description: string
 </script>
 
-<div>
-  <div class="svg">
+<div class="stat w-sm">
+  <div class="stat-value svg mx-auto">
     <slot />
   </div>
-  <h2>{title}</h2>
-  <p>{description}</p>
+  <h2 class="stat-title text-xl font-bold">{title}</h2>
+  <p class="stat-desc">{description}</p>
 </div>
 
 <style>
-  div {
-    width: min(220px, 100%);
-    justify-self: center;
+  .stat {
+    gap: 0.75em;
   }
-  h2 {
-    font-size: 1em;
-  }
-  p {
-    font-size: 0.75em;
-    font-weight: 200;
-  }
-  * {
-    margin-bottom: 0.45rem;
+  .stat-title,
+  .stat-desc {
+    text-wrap: balance;
   }
   .svg {
     font-size: 3rem;

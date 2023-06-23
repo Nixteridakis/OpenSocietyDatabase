@@ -11,29 +11,38 @@
   } from '@fortawesome/free-solid-svg-icons'
 </script>
 
-<main>
-  <section class="hero-section">
-    <h1>We fight fake news and support data-driven politics</h1>
-    <p>Prepar your political meetings an create insights about topics with the political database</p>
-    <div class="search">
-      <input type="text" placeholder="On which topic do you want to prepare data" />
-      <button>
-        <img src="/../../icons/search.svg" alt="" />
-      </button>
+<main class="space-y-10">
+  <section class="hero min-h-[28em]">
+    <div class="hero-content text-left">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl font-bold">We fight fake news and support data-driven politics</h1>
+        <p class="py-6">Prepare your political meetings an create insights about topics with the political database</p>
+        <div class="form-control">
+          <div class="input-group w-full mx-auto">
+            <button class="btn btn-lg btn-square">
+              <img src="/../../icons/search.svg" alt="" />
+            </button>
+            <input
+              type="text"
+              class="input input-bordered w-full input-lg text-xl"
+              placeholder="On which topic do you want to prepare data"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="container">
-    <div class="grid">
+  <section class="flex flex-wrap items-center justify-center min-h-[6rem] gap-2 overflow-x-hidden">
+    <div class="bg-white stats stats-vertical md:stats-horizontal shadow">
       <HomeLiveCounts count={1618907} title="Datasets" description="European public sector datasets" />
       <HomeLiveCounts count={176} title="Catalogues" description="Datasets grouped by category" />
       <HomeLiveCounts count={36} title="Countries" description="Explore datasets by country" />
       <HomeLiveCounts count={1383} title="News places" description="News related to open data" />
       <HomeLiveCounts count={193} title="Data stories" description="Inspiring stories about open-data" />
-      <HomeLiveCounts count={11} title="Course" description="Learning material on open data" />
     </div>
   </section>
-  <section class="container">
-    <div class="grid">
+  <section class="flex flex-wrap items-center justify-center overflow-x-hidden p-10 gap-4 container mx-auto">
+    <div class="stats max-w-4xl text-center">
       <HomeFacts
         title="We analyze thousands of studies"
         description="Our database allow every stakeholdr within society to make data-driven desicion based on scientific data-facts"
@@ -103,39 +112,3 @@
     </div>
   </section>
 </main>
-
-<style>
-  .topics-container {
-    display: grid;
-    grid-template-columns: (1fr);
-    gap: 0.5em;
-    padding: 0.5em;
-  }
-  @media (min-width: 768px) {
-    .topics-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    .topics-container {
-      background-color: white;
-    }
-  }
-  .topic-teasers {
-    display: flex;
-    padding: 1rem;
-    background-color: var(--clr-primary-100);
-  }
-
-  .topic-teasers h3 {
-    font-size: 1em;
-    margin: 0 0 0 1rem;
-  }
-  .examine {
-    padding: var(--block-spacing-vertical) 0E;
-    background-color: #fff;
-  }
-  .examine--heading {
-    text-align: center;
-  }
-</style>

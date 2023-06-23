@@ -1,6 +1,5 @@
-@layer reset, pico, theme, global;
+@layer global;
 
-@import './pico.min.css' layer(pico);
-@import './reset.css' layer(reset);
-@import './theme.css' layer(theme);
+/* @import './reset.css' layer(reset); */
+/* @import './theme.css' layer(theme); */
 @import './global.css' layer(global);

@@ -5,47 +5,28 @@
 </script>
 
 <header>
-  <div class="container-fluid primary-nav">
-    <a href="#"><Fa icon={faDatabase} /> Open Society Database</a>
-    <nav class="primary-navigation">
-      <ul role="list" class="nav-list">
-        <li><a href="#">European Initiatives</a></li>
-        <li><a href="#">European Use Cases</a></li>
-        <li role="list" dir="rtl">
-          <a href="#" aria-haspopup="listbox">Select your country</a>
-          <ul role="listbox">
-            <li><a href="/country/Germany" data-sveltekit-preload-data="tap">Germany</a></li>
-            <li><a href="/country/Italy" data-sveltekit-preload-data="tap">Italy</a></li>
-            <li><a href="/country/Greece" data-sveltekit-preload-data="tap">Greece</a></li>
-          </ul>
+  <div class="navbar primary-nav">
+    <a href="/" class="navbar-start"><Fa icon={faDatabase} class="mr-1" />Open Society Database</a>
+    <nav class="navbar-center flex">
+      <ul class="menu menu-horizontal">
+        <li><a href="/">European Initiatives</a></li>
+        <li><a href="/">European Use Cases</a></li>
+        <li>
+          <details>
+            <summary>Select your country</summary>
+            <ul>
+              <li><a href="/country/Germany" data-sveltekit-preload-data="tap">Germany</a></li>
+              <li><a href="/country/Italy" data-sveltekit-preload-data="tap">Italy</a></li>
+              <li><a href="/country/Greece" data-sveltekit-preload-data="tap">Greece</a></li>
+            </ul>
+          </details>
         </li>
       </ul>
     </nav>
-    <a class="btn-sm subscribe" href="#" on:click|preventDefault role="button">Newsletter Subscribe</a>
+    <div class="navbar-end">
+      <a class="btn btn-sm" href="#" on:click|preventDefault role="button">Newsletter Subscribe</a>
+    </div>
   </div>
 </header>
 <slot />
 <footer />
-
-<style>
-  .primary-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-  }
-  .primary-navigation,
-  .subscribe {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    .primary-navigation,
-    .subscribe {
-      display: block;
-    }
-  }
-  footer {
-    padding: 2em 5 em;
-    background-color: var(--clr-primary-600);
-  }
-</style>
