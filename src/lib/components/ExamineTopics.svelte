@@ -27,8 +27,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     & li {
       color: var(--clr-primary-600);
+      list-style: none;
     }
   }
   a {

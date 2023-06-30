@@ -126,7 +126,6 @@
     padding: 1rem;
     background-color: var(--clr-primary-100);
   }
-
   .topic-teasers h3 {
     font-size: 1em;
     margin: 0 0 0 1rem;

@@ -3,7 +3,7 @@
   export let description: string
 </script>
 
-<div>
+<div class="home-facts">
   <div class="svg">
     <slot />
   </div>
@@ -32,6 +32,11 @@
   @media screen and (min-width: 875px) {
     .svg {
       font-size: 2.5em;
+    }
+  }
+  @media screen and (max-width: 874px) {
+    .home-facts {
+      text-align: center;
     }
   }
 </style>
