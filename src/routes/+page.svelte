@@ -80,10 +80,10 @@
           points using the available evidence. Each category is divided into subtopics, which are then
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 max-w-xs md:max-w-fit mx-auto gap-4">
-        <ExamineTopics name="Health" subTopics={['Local Government', 'National Government', 'Public Health']} />
+      <div class="grid grid-cols-2 md:grid-cols-4 max-w-xs md:max-w-3xl mx-auto gap-4">
+        <ExamineTopics name="Health" subTopics={['Healthcare', 'Mental Health', 'Health Insurance']} />
+        <ExamineTopics name="Housing" subTopics={['Housing', 'Homelessness', 'Renting']} />
         <ExamineTopics name="Education" subTopics={['Schools', 'Universities', 'Student Loans']} />
-        <ExamineTopics name="Social Housing" subTopics={['Housing', 'Homelessness', 'Renting']} />
         <ExamineTopics name="Immigration" subTopics={['Migration', 'Refugees', 'Asylum Seekers']} />
       </div>
     </div>

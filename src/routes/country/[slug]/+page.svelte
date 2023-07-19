@@ -1,14 +1,29 @@
 <script>
   /** @type {import('./$types').PageData} */
   export let data
+  import FA from 'svelte-fa'
+  import { faServer } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <div class="container-fluid">
   <div class="grid-flow">
     <div class="bg-lime-400">Content1</div>
-    <div class="bg-orange-500">
-      <h1>{data.post.title}</h1>
-      <div>{@html data.post.content}</div>
+    <div class="bg-orange-500 space-y-8 py-8">
+      <div class="text-sm breadcrumbs">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Country</a></li>
+          <li>{data.post.title}</li>
+        </ul>
+      </div>
+      <h1 class="text-5xl">{data.post.title}</h1>
+      <div class="text-xl">{@html data.post.content}</div>
+      <div>
+        <button class="btn">
+          <FA icon={faServer} class="text-red-500" />
+          Explore Databases
+        </button>
+      </div>
     </div>
     <div class="bg-yellow-500">Content2</div>
   </div>
@@ -34,7 +49,7 @@
   }
   @media (min-width: 1024px) {
     .grid-flow {
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
     }
   }
 </style>

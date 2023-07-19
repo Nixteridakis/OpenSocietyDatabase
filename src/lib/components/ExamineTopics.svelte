@@ -1,12 +1,4 @@
 <script>
-  // import { onMount } from 'svelte';
-  // import { get } from 'svelte/store';
-  // import { topic } from '$lib/stores.js';
-  // let name = '';
-  // onMount(async () => {
-  //     const topicName = get(topic);
-  //     name = topicName;
-  // });
   let { name, subTopics } = $$props
 </script>
 
@@ -16,7 +8,7 @@
   </h4>
   <ul>
     {#each subTopics as subTopic}
-      <li><a>{subTopic}</a></li>
+      <li><a class="link">{subTopic}</a></li>
     {/each}
   </ul>
   <p><a href="#">See All &#8594;</a></p>
