@@ -2,6 +2,7 @@
   import HomeFacts from '$lib/components/HomeFacts.svelte'
   import HomeLiveCounts from '$lib/components/HomeLiveCounts.svelte'
   import ExamineTopics from '$lib/components/ExamineTopics.svelte'
+  import HomeCategories from '$lib/components/HomeCategories.svelte'
   import FA from 'svelte-fa'
   import {
     faMagnifyingGlassChart,
@@ -42,7 +43,7 @@
     </div>
   </section>
   <section class="flex flex-wrap items-center justify-center overflow-x-hidden p-10 gap-4 container mx-auto">
-    <div class="stats max-w-4xl text-center">
+    <div class="stats stats-vertical md:stats-horizontal max-w-4xl text-center">
       <HomeFacts
         title="We analyze thousands of studies"
         description="Our database allow every stakeholdr within society to make data-driven desicion based on scientific data-facts"
@@ -60,54 +61,30 @@
       >
     </div>
   </section>
-  <section class="container topics-container">
-    <div class="topic-teasers">
-      <FA icon={faMoneyBills} color="var(--clr-primary-400)" />
-      <h3>Offentliche Verwaltung und Finanzen</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Staatsburgerschaft</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Kommer und Tourismus</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Kultur</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Umwelt</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Ausrustung, Dienstung, Soziales</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>Mobilitat und offentlicher Raum</h3>
-    </div>
-    <div class="topic-teasers">
-      <FA icon={faBuildingColumns} color="var(--clr-primary-400)" />
-      <h3>"Stadtplanung und Wohen"</h3>
-    </div>
+  <section class="topics-container bg-white max-w-3xl mx-auto grid grid-cols-none md:grid-cols-2 gap-3 border-box p-3">
+    <HomeCategories title="Offentliche Verwaltung und Finanzen" />
+    <HomeCategories title="Staatsburgerschaft" />
+    <HomeCategories title="Kommer und Tourismus" />
+    <HomeCategories title="Kultur" />
+    <HomeCategories title="Umwelt" />
+    <HomeCategories title="Ausrustung, Dienstung, Soziales" />
+    <HomeCategories title="Mobilitat und offentlicher Raum" />
+    <HomeCategories title="Stadtplanung und Wohen" />
   </section>
-  <section class="container-fluid examine">
-    <div class="container">
-      <div class="examine--heading">
-        <h2>Explore Examine</h2>
-        <p>
-          Examine is structured around 25 broad health categories, containing hundreds of conditions, Interventiosn
-          (like supplements and diets) are studied for measurable changes in specific outcomes
+  <section class="bg-white py-14">
+    <div class="max-w-5xl mx-auto space-y-14">
+      <div class="examine--heading text-center">
+        <h2 class="text-2xl">Explore Examine</h2>
+        <p class="text-sm">
+          OpenSocietyDatabase is structured around 25 broad categories, containing hundreds of evaluations of data
+          points using the available evidence. Each category is divided into subtopics, which are then
         </p>
       </div>
-      <div class="grid">
-        <ExamineTopics name="Conditions" subTopics={['Anxiety', 'Insomnia', 'Multiple Sclerosis']} />
-        <ExamineTopics name="Interventions" subTopics={['Ashwagandha', 'Creatine', 'Fish Oil']} />
-        <ExamineTopics name="Outcomes" subTopics={['Blood Glucose', 'Blood Pressure', 'Testosterone']} />
-        <ExamineTopics name="Categories" subTopics={['Brain Health', 'Fat Loss', 'Muscle Gain & Excercise']} />
+      <div class="grid grid-cols-2 md:grid-cols-4 max-w-xs md:max-w-fit mx-auto gap-4">
+        <ExamineTopics name="Health" subTopics={['Local Government', 'National Government', 'Public Health']} />
+        <ExamineTopics name="Education" subTopics={['Schools', 'Universities', 'Student Loans']} />
+        <ExamineTopics name="Social Housing" subTopics={['Housing', 'Homelessness', 'Renting']} />
+        <ExamineTopics name="Immigration" subTopics={['Migration', 'Refugees', 'Asylum Seekers']} />
       </div>
     </div>
   </section>

@@ -15,4 +15,7 @@ body main {
   padding: var(--block-spacing-vertical) 0;
 }
 
+a {
+  @apply text-info cursor-pointer;
+}
 /* Navigation styling */

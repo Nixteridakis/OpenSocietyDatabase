@@ -7,7 +7,7 @@
 <header>
   <div class="navbar primary-nav">
     <a href="/" class="navbar-start"><Fa icon={faDatabase} class="mr-1" />Open Society Database</a>
-    <nav class="navbar-center flex">
+    <nav class="navbar-center md:flex hidden">
       <ul class="menu menu-horizontal">
         <li><a href="/">European Initiatives</a></li>
         <li><a href="/">European Use Cases</a></li>
@@ -24,7 +24,7 @@
       </ul>
     </nav>
     <div class="navbar-end">
-      <a class="btn btn-sm" href="#" on:click|preventDefault role="button">Newsletter Subscribe</a>
+      <a class="btn btn-xs md:btn-sm" href="#" on:click|preventDefault role="button">Newsletter Subscribe</a>
     </div>
   </div>
 </header>

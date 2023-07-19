@@ -4,18 +4,18 @@
 </script>
 
 <div class="container-fluid">
-  <div class="bg-primary-400 grid-flow">
-    <div>Content1</div>
-    <div>
+  <div class="grid-flow">
+    <div class="bg-lime-400">Content1</div>
+    <div class="bg-orange-500">
       <h1>{data.post.title}</h1>
       <div>{@html data.post.content}</div>
     </div>
-    <div class="bg-accent-600">Content2</div>
+    <div class="bg-yellow-500">Content2</div>
   </div>
   <div class="grid-flow content">
-    <div class="bg-accent-200">Section 1</div>
-    <div>Section 2</div>
-    <div class="bg-accent-200">Section 3</div>
+    <div class="bg-indigo-500">Section 1</div>
+    <div class="bg-rose-700">Section 2</div>
+    <div class="bg-pink-300">Section 3</div>
   </div>
 </div>
 
